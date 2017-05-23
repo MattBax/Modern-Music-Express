@@ -1,0 +1,213 @@
+<html>
+	<head>
+	
+	
+	<link rel="stylesheet" type="text/css" href="externalstyle.css" />
+	
+	<script type="text/javascript" language="javascript">
+	
+function startTime() {
+    var today = new Date();
+    var hr = today.getHours();
+    var min = today.getMinutes();
+    var sec = today.getSeconds();
+
+    min = checkTime(min);
+    sec = checkTime(sec);
+    document.getElementById("clock").innerHTML = hr + " : " + min + " : " + sec;
+    var time = setTimeout(function(){ startTime() }, 500);
+}
+function checkTime(i) {
+    if (i < 10) {
+        i = "0" + i;
+    }
+    return i;
+}
+	
+	
+	var image1 = new Image;
+	var image2 = new Image;
+	var image3	= new Image;
+	var image4	= new Image;
+	var image5	= new Image;
+	var image6	= new Image;
+	image1.src = "headerimg.jpg";
+	image2.src = "headerimg2.jpg";
+	image3.src = "headerimg3.jpg";
+	image4.src = "headerimg4.jpg";
+	image5.src = "headerimg5.jpg";
+	image6.src = "headerimg6.jpg";
+	
+	var frame = new Array(image1,image2,image3,image4,image5,image6);
+	var numframes = frame.length;
+	var curframe = 0;
+
+	function animateBanner()
+{
+   curframe++;
+   if(curframe == numframes) curframe = 0;
+   document.myBanner.src = frame[curframe].src;
+   setTimeout("animateBanner()",3000);  
+}
+	
+	
+	
+	
+	
+	
+	<!-- function validateForm(thisform){ -->
+	<!-- if(thisform.FirstName.value=="") { -->
+	<!-- alert("Please enter your First Name."); -->
+	<!-- thisform.FirstName.focus(); -->
+	<!-- return false; -->
+	<!-- } -->
+	
+	<!-- if(thisform.EmailAddress.value=="") { -->
+	<!-- alert("Please enter your Email Address."); -->
+	<!-- thisform.EmailAddress.focus(); -->
+	<!-- return false; -->
+	<!-- } -->
+	<!-- if(thisform.Message.value=="") { -->
+	<!-- alert("Please enter your Message."); -->
+	<!-- thisform.Message.focus(); -->
+	<!-- return false; -->
+	<!-- } -->
+	<!-- var e = thisform.EmailAddress.value; -->
+	
+	<!-- if ((e.indexOf("@")<0) || (e.indexOf(".")<0)){ -->
+	<!-- alert("Please include an '@' or '.' symbol. in your Email Address.") -->
+	<!-- thisform.EmailAddress.focus(); -->
+	<!-- return false; -->
+	<!-- } -->
+	<!-- if (e.length < 10) { -->
+	<!-- alert("Email Address must be at least 10 characters."); -->
+	<!-- thisform.EmailAddress.focus(); -->
+	<!-- return false; -->
+	<!-- } -->
+	<!-- var f = thisform.Message.value; -->
+	
+	<!-- if (f.length < 25){ -->
+	<!-- alert("Message must be at least 25 characters."); -->
+	<!-- thisform.Message.focus(); -->
+	<!-- return false; -->
+	
+	<!-- } -->
+	
+	<!-- var g = thisform.FirstName.value; -->
+	
+	<!-- if (g.length < 10){ -->
+	<!-- alert("Full Name must be at least 10 characters."); -->
+	<!-- thisform.FirstName.focus(); -->
+	<!-- return false; -->
+	
+	<!-- } -->
+	
+	<!-- else { -->
+	<!-- alert("Thank you for your query! We will get back to you as soon as possible.") -->
+	
+	<!-- } -->
+		
+<!-- } -->
+
+
+	 
+      
+		  
+		  
+      </script>
+	  
+	  
+	
+
+	
+</script>
+
+	
+	
+	</head>
+	
+	<body onload="startTime(), animateBanner()">
+
+	<div id="wrapper">
+		
+		<div id="header">
+		
+		<div class="container">
+	<img name="myBanner" src="headerimg.jpg">
+	</div>
+				
+	<div id="clockdate"></div>
+	<div class="clockdate-wrapper"><div>
+	<div id="clock""></div>
+   
+	 
+   
+	</div>
+	
+	
+  
+</div>
+		<h1 style="color: black;font: sans-serif;font-size: 40px;text-transform: uppercase;text-align: center;">Modern Music Express</h1>
+		</div><!-- #header -->
+		
+		<ul id="nav">
+      <li><a href="Home.html">Home Page</a></li>
+      <li><a href="About.html">About Us</a></li>
+      <li><a href="Special.html">Special Offers</a></li>
+      <li><a href="Contact.php">Contact</a></li>
+      <li><a href="Useful.html">Useful Links</a></li>
+	  <li><a href="adminContent.php">Admin Page</a></li>
+	    </ul>
+		
+		
+		<div id="content">
+		
+		<h2>Useful Links:</h2>
+		
+		
+		<div class="mainText">
+		Check the MME approved links to some of the best music resources around. Click the images below to be brought to your preferred site!
+		
+		</div>
+		
+		<div class="imagesleft">
+		<a href="http://allmusic.com"><img src = "allmusic.png" width="150" height="150"></a>
+		<a href="http://bandcamp.com"><img src = "bandcamp.jpg" width="150" height="150"></a>
+		<a href="http://discogs.com"><img src = "Discogs.jpg" width="150" height="150"></a>
+		<a href="http://hotpress.com"><img src = "hotpress.jpg" width="150" height="150"></a>
+		<a href="http://pitchfork.com"><img src = "pitchfork.jpg" width="150" height="150"></a>
+		<a href="http://metacritic.com/music"><img src = "metacritic.png" width="175" height="150"></a>
+		<a href="http://reddit.com/r/Music/"><img src = "reddit.jpeg" width="150" height="150"></a>
+		<a href="http://consequenceofsound.net/"><img src = "cos.jpg" width="150" height="150"></a>
+		</div>
+		
+		<div class="mainText">
+		Picture links not working? Try the alternative hyperlinks below.
+		</div>
+		
+		<ul class="b">
+			<li><a href="http://www.allmusic.com/">All Music - An excellent source of music reviews and recommendations</a></li>
+			<li><a href="https://www.discogs.com/search/">Discogs - A vast database cataloging millions of songs, albums and artists based on genre, style etc.</a></li>
+			<li><a href="https://bandcamp.com/">Bandcamp - A great way to discover new artists and to support their work directly!</a></li>
+			<li><a href="http://www.hotpress.com/"> Hotpress - Iconic Irish music magazine. Brilliant for gig & concert information</a></li>
+			<li><a href="http://pitchfork.com">Pitchfork - An online music magazine. Great for new music reviews and news</a></li>
+			<li><a href="http://metacritic.com/music">Metacritic - Aggregates online reviews of music albums</a></li>
+			<li><a href="http://reddit.com/r/Music">Reddit Music - Music section of the popular online forum</a></li>
+			<li><a href="http://consequenceofsound.net/">Consequence of Sound - Focuses on alternative music; reviews, editorials and news</a></li>
+			
+		
+		
+		</ul>
+		
+		</div><!-- #content -->
+		
+		<div id="footer">
+		<h3>&copy; Modern Music Express 2016</h3>
+		</div><!-- #footer -->
+		
+		
+	</div><!-- #wrapper -->
+	
+</body>
+
+</html>

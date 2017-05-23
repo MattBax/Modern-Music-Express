@@ -1,0 +1,260 @@
+<html>
+	<head>
+	
+	
+	<link rel="stylesheet" type="text/css" href="externalstyle.css" />
+	<style>
+	
+	 
+.clockdate-wrapper {
+    background-color: #333;
+    padding:10px;
+    max-width:120px;
+    width:50%;
+    text-align:left;
+    border-radius:5px;
+    margin:0 auto;
+    margin-top:15%;
+	position:absolute;
+	top:-120px;
+}
+#clock{
+    background-color:#333;
+    font-family: sans-serif;
+    font-size:20px;
+    text-shadow:0px 0px 1px #fff;
+    color:#fff;
+	
+}
+#clock span {
+    color:#888;
+    text-shadow:0px 0px 1px #333;
+    font-size:30px;
+    position:absolute;
+    top:0px;
+    left:0px;
+}	
+
+#background-image {
+	width: 100%;
+	height: auto;
+
+
+}
+
+.container img {
+	max-height:80%;
+	max.width:auto%;
+
+}
+}
+
+
+</style>
+
+
+	<script type="text/javascript" language="javascript">
+	
+function startTime() {
+    var today = new Date();
+    var hr = today.getHours();
+    var min = today.getMinutes();
+    var sec = today.getSeconds();
+
+    min = checkTime(min);
+    sec = checkTime(sec);
+    document.getElementById("clock").innerHTML = hr + " : " + min + " : " + sec;
+    var time = setTimeout(function(){ startTime() }, 500);
+}
+function checkTime(i) {
+    if (i < 10) {
+        i = "0" + i;
+    }
+    return i;
+}
+	
+	
+	var image1 = new Image;
+	var image2 = new Image;
+	var image3	= new Image;
+	var image4	= new Image;
+	var image5	= new Image;
+	var image6	= new Image;
+	image1.src = "headerimg.jpg";
+	image2.src = "headerimg2.jpg";
+	image3.src = "headerimg3.jpg";
+	image4.src = "headerimg4.jpg";
+	image5.src = "headerimg5.jpg";
+	image6.src = "headerimg6.jpg";
+	
+	var frame = new Array(image1,image2,image3,image4,image5,image6);
+	var numframes = frame.length;
+	var curframe = 0;
+
+	function animateBanner()
+{
+   curframe++;
+   if(curframe == numframes) curframe = 0;
+   document.myBanner.src = frame[curframe].src;
+   setTimeout("animateBanner()",3000);  
+}
+	
+	
+	
+	
+	
+	
+	function validateForm(thisform){
+	if(thisform.FirstName.value=="") {
+	alert("Please enter your First Name.");
+	thisform.FirstName.focus();
+	return false;
+	}
+	
+	if(thisform.EmailAddress.value=="") {
+	alert("Please enter your Email Address.");
+	thisform.EmailAddress.focus();
+	return false;
+	}
+	if(thisform.Message.value=="") {
+	alert("Please enter your Message.");
+	thisform.Message.focus();
+	return false;
+	}
+	var e = thisform.EmailAddress.value;
+	
+	if ((e.indexOf("@")<0) || (e.indexOf(".")<0)){
+	alert("Please include an '@' or '.' symbol. in your Email Address.")
+	thisform.EmailAddress.focus();
+	return false;
+	}
+	if (e.length < 10) {
+	alert("Email Address must be at least 10 characters.");
+	thisform.EmailAddress.focus();
+	return false;
+	}
+	var f = thisform.Message.value;
+	
+	if (f.length < 25){
+	alert("Message must be at least 25 characters.");
+	thisform.Message.focus();
+	return false;
+	
+	}
+	
+	var g = thisform.FirstName.value;
+	
+	if (g.length < 10){
+	alert("Full Name must be at least 10 characters.");
+	thisform.FirstName.focus();
+	return false;
+	
+	}
+	
+	else {
+	alert("Thank you for your query! We will get back to you as soon as possible.")
+	
+	}
+		
+}
+
+
+	 
+      
+		  
+		  
+      </script>
+	  
+	  
+	
+
+	
+</script>
+
+	</head>
+	
+	
+	
+<body onload="startTime(), animateBanner()">
+
+	<div id="wrapper">
+		
+		<div id="header">
+		
+		<div class="container">
+	<img name="myBanner" src="headerimg.jpg">
+	</div>
+				
+	<div id="clockdate"></div>
+	<div class="clockdate-wrapper"><div>
+	<div id="clock""></div>
+   
+	 
+   
+	</div>
+	
+	
+  
+</div>
+		
+		
+		<h1 style="color: black;font: sans-serif;font-size: 40px;text-transform: uppercase;text-align: center;">Modern Music Express</h1>
+		</div><!-- #header -->
+		
+		<ul id="nav">
+      <li><a href="Home.html">Home Page</a></li>
+      <li><a href="About.html">About Us</a></li>
+      <li><a href="Special.html">Special Offers</a></li>
+      <li><a href="Contact.php">Contact</a></li>
+      <li><a href="Useful.html">Useful Links</a></li>
+	  <li><a href="adminContent.php">Admin Page</a></li>
+	    </ul>
+		
+		
+		<div id="content">
+		
+		<h2>Music is our passion!</h2>
+			<div class='mainText'>
+			<p>Welcome to Modern Music Express - Ireland's largest music megastore. Our dedicated online store contains hundreds of CD's,
+			Vinyls, DVD's and much more.
+			From the latest releases to the classics, we cater for all tastes and genres - all at unbeatable prices!</p>
+			
+			<p>Our new and improved website features a handy navigation panel on the top of the site. Be sure to browse through it!</p>
+			</div>
+			
+			<h2>Latest News:</h2>
+			
+			<div class="imagesLeft">
+			<img src="AtrocityExhibition.jpg" width="150" height="150"></img>
+			<img src="Walls.jpg" width="150" height="150"></img>
+			<img src="metallica.jpeg" width="150" height="150"></img>
+			<img src="getaway.jpg" width="150" height="150"></img>
+			<img src="gore.jpg" width="150" height="150"></img>
+			<img src="moon.jpg" width="150" height="150"></img>
+			<img src="pablo.jpg" width="150" height="150"></img>
+			<img src="blond.jpg" width="180" height="150"></img>
+			</div>
+		
+		
+			<ul class="a">
+			<li><b>The Best of 2016</b> - Our experts look back on the best releases of the year. </li>
+			<li><b>What's coming up?</b> - Take a look at the most anticipated upcoming releases of 2017.</li>
+			<li><b>January MegaSale!</b> - Cure those January blues with unmissable deals on your favourite music.</li>
+			<li><b>Who music lost in 2016?</b> - From David Bowie to George Michael, we remember the individuals which the music world lost.</li>
+			<li><b>The Joshua Tree Tour</b> - U2 confirm that they will extensively tour their seminal album!</li>
+			<li><b>Festival Guide 2017</b> - Check out the best festivals this year in Ireland, UK, Europe and beyond!</li>
+			
+			</ul>
+		
+		</div><!-- #content -->
+		
+		<div id="footer">
+		<h3>&copy; Modern Music Express 2016</h3>
+		</div><!-- #footer -->
+		
+		
+	</div><!-- #wrapper -->
+	
+</body>
+
+</html>

@@ -1,0 +1,220 @@
+<html>
+	<head>
+	
+	
+	<link rel="stylesheet" type="text/css" href="externalstyle.css" />
+	
+<style>
+	
+table.gridtable {
+	font-family: verdana,arial,sans-serif;
+	font-size:15px;
+	color:#333333;
+	border-width: 1px;
+	border-color: #666666;
+	border-collapse: collapse;
+	margin-left:auto; 
+    margin-right:auto;
+}
+table.gridtable th {
+	border-width: 1px;
+	padding: 22px;
+	border-style: solid;
+	border-color: #666666;
+	background-color: #dedede;
+}
+table.gridtable td {
+	border-width: 1px;
+	padding: 22px;
+	border-style: solid;
+	border-color: #666666;
+	background-color: #ffffff;
+}
+tr:hover{background-color:#f5f5f5}
+
+#description {
+    left:450px;
+    top:175px; 
+	
+	
+}
+
+</style>
+
+<script type="text/javascript" language="javascript">
+	
+	function startTime() {
+    var today = new Date();
+    var hr = today.getHours();
+    var min = today.getMinutes();
+    var sec = today.getSeconds();
+
+    min = checkTime(min);
+    sec = checkTime(sec);
+    document.getElementById("clock").innerHTML = hr + " : " + min + " : " + sec;
+    var time = setTimeout(function(){ startTime() }, 500);
+	}
+	
+	function checkTime(i) {
+    if (i < 10) {
+        i = "0" + i;
+    }
+    return i;
+	}
+	
+	
+	var image1 = new Image;
+	var image2 = new Image;
+	var image3	= new Image;
+	var image4	= new Image;
+	var image5	= new Image;
+	var image6	= new Image;
+	image1.src = "headerimg.jpg";
+	image2.src = "headerimg2.jpg";
+	image3.src = "headerimg3.jpg";
+	image4.src = "headerimg4.jpg";
+	image5.src = "headerimg5.jpg";
+	image6.src = "headerimg6.jpg";
+	
+	var frame = new Array(image1,image2,image3,image4,image5,image6);
+	var numframes = frame.length;
+	var curframe = 0;
+
+	function animateBanner()
+	{
+   curframe++;
+   if(curframe == numframes) curframe = 0;
+   document.myBanner.src = frame[curframe].src;
+   setTimeout("animateBanner()",3000);  
+	}
+
+	
+	
+
+</script>
+
+
+
+	
+</head>
+	
+	
+	<body onload="startTime(), animateBanner()">
+
+	<div id="wrapper">
+		
+		<div id="header">
+		
+		<div class="container">
+		<img name="myBanner" src="headerimg.jpg">
+		</div>
+				
+		<div id="clockdate"></div>
+		<div class="clockdate-wrapper"><div>
+		<div id="clock"></div>
+		
+			</div>
+	
+	
+  
+		</div>
+		
+		<h1 style="color: black;font: sans-serif;font-size: 40px;text-transform: uppercase;text-align: center;">Modern Music Express</h1>
+		</div><!-- #header -->
+		
+		
+		
+		<script type="text/javascript">
+		
+			
+					function getdesc(id){
+						if(id=="Views"){
+							document.getElementById('description').innerHTML='Views is the fourth studio album by Canadian rapper Drake. It was released in 2016';
+						} else if(id=="Blond"){
+							document.getElementById('description').innerHTML='Blond is the acclaimed second album from American singer Frank Ocean. It was released in 2016';
+						} else if(id=="Purpose"){
+							document.getElementById('description').innerHTML='Purpose is the multi-platinum selling fourth album from Canadian singer Justin Bieber. It was released in 2015';
+						} else if(id=="Blank"){
+							document.getElementById('description').innerHTML='Blank Face LP is the Grammy nominated fourth album from American rapper ScHoolboy Q. It was released in 2016';
+						} 
+					}
+		
+		
+		
+		
+		
+		</script>
+		<ul id="nav">
+      <li><a href="Home.html">Home Page</a></li>
+      <li><a href="About.html">About Us</a></li>
+      <li><a href="Special.html">Special Offers</a></li>
+      <li><a href="Contact.php">Contact</a></li>
+      <li><a href="Useful.html">Useful Links</a></li>
+	  <li><a href="adminContent.php">Admin Page</a></li>
+	    </ul>
+		
+		
+		<div id="content">
+		<div id="description"></div>
+		<h2>Special Offers: January 2017</h2>
+		
+		<div class="mainText">
+		<p>Cure those January blues with some unmissable offers!</p>
+		</div>
+		
+		
+		<div class="imagesleft">
+		
+		<img id="Views" onmouseover="getdesc(id)"  img src="views.jpg" width = "150" height = "150">
+		
+		<img id="Blond" onmouseover="getdesc(id)" src="blond.jpg" width = "150" height = "150">
+		
+		</div>
+		
+		<div class ="imagesright">
+		
+		<img id="Purpose" onmouseover="getdesc(id)" src="purpose.png"  width = "150" height = "150">
+		
+		<img id="Blank" onmouseover="getdesc(id)" src="blankface.jpg" width = "150" height = "150">
+		
+		</div>
+		
+		
+		
+		<table class="gridtable">
+<tr>
+	<th>Item:</th><th>Was:</th><th>Now:</th><th>Total Savings:</th>
+</tr>
+<tr>
+	<td>Drake - Views</td><td>€15</td><td>€9</td><td>€6</td>
+</tr>
+<tr>
+	<td>Justin Bieber - Purpose</td><td>€10</td><td>€6</td><td>€4</td>
+</tr>
+
+<tr>
+	<td>Frank Ocean - Blond</td><td>€19</td><td>€10</td><td>€9</td>
+</tr>
+<tr>
+	<td>ScHoolboy Q - Blank Face LP</td><td>€14</td><td>€7</td><td>€7</td>
+</tr>	
+
+</table>
+
+	
+		
+		</div><!-- #content -->
+		
+		<div id="footer">
+		<h3>&copy; Modern Music Express 2016</h3>
+		</div><!-- #footer -->
+		
+		
+	</div><!-- #wrapper -->
+	
+</body>
+
+
+
+
+</html>
